@@ -13,6 +13,7 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+        { name: 'robots', content: 'noindex, nofollow' },
       ]}
     />
     {/* <Headroom wrapperStyle={{ position: 'relative', zIndex: 100 }}> */}
