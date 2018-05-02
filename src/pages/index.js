@@ -1,28 +1,38 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
-import Deck from '../components/Deck'
-import Gallery from '../components/Gallery'
-
-const deckAlbum = [
-  require('../../static/vic0.jpg'),
-  require('../../static/vic1.jpg'),
-  require('../../static/vic2.jpg'),
-  require('../../static/cummings0.jpg'),
-  require('../../static/cummings1.jpg')
-]
+import LogoAni from '../components/LogoAni'
 
 
+// const IndexPage = () => (
+class IndexPage extends React.Component {
 
-const IndexPage = () => (
-  <div>
-    <h1>Decking</h1>
-    {/* <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p> */}
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
-    {/* <Deck /> */}
-    <Gallery album={deckAlbum}/>
-  </div>
-)
+  constructor(props) {
+    super(props);
+    this.state = {
+      sx: 1,
+    };
+  }
+
+  handleClick = () => {
+
+    this.setState({
+      sx: 0.5,
+    })
+
+  }
+
+  render() {
+    return (
+      <div>
+        <LogoAni />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        {/* <h1 onClick={this.handleClick} style={{opacity: this.state.sx}}>Decking</h1> */}
+        <Link to="/page-2/">Go to page 2</Link>
+
+
+      </div>
+    )}
+}
+// )
 
 export default IndexPage

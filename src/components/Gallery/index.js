@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Swiper from 'react-id-swiper'
-import "./swiper.min.css"
+import React, { Component } from 'react';
+import Swiper from 'react-id-swiper';
+import "./swiper.min.css";
 
 
 class Gallery extends React.Component {
@@ -17,6 +17,7 @@ class Gallery extends React.Component {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
+      keyboard: true
     }
     return (
       <Swiper {...params}>

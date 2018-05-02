@@ -1,0 +1,38 @@
+.aniContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.houseSvg {
+  width: 100%;
+  max-width: 600px;
+  stroke-width: 26px;
+}
+.house0 {
+  stroke: #016363;
+  transform: translateX(-10%);
+}
+.house1 {
+  stroke: #016363;
+}
+.house2 {
+  stroke: #4c6b27;
+}
+.houseSvg rect {
+  transition: opacity 0.3s;
+  fill: #000;
+  opacity: 0;
+}
+.houseSvg rect:nth-of-type(3) {
+  transition-delay: 5.0s;
+}
+.houseSvg rect:nth-of-type(4) {
+  transition-delay: 5.2s;
+}
+.houseSvg rect:nth-of-type(1) {
+  transition-delay: 5.4s;
+}
+.houseSvg rect:nth-of-type(2) {
+  transition-delay: 5.6s;
+}
