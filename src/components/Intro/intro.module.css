@@ -1,0 +1,15 @@
+.container {
+  padding: 2rem 0;
+}
+.prefade {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.4s, opacity 0.4s;
+}
+.prefade__active {
+  visibility: visible;
+  transition: transform 0.4s, opacity 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -25,26 +25,29 @@ class Header extends React.Component {
       <div
         style={{
           background: '#fff',
-          marginBottom: '1.45rem',
-          boxShadow: 'rgb(154, 151, 151) 0px 1px 4px 0px',
-          // transform: 'translateY(' + this.state.headPos + ')',
-          // transition: 'transform 0.6s',
+          boxShadow: 'rgb(199, 199, 199) 0px 0px 2px 0px',
+          position: 'fixed',
+          width: '100%',
+          zIndex: 100,
         }}
       >
         <div
           style={{
             margin: '0 auto',
             maxWidth: 960,
-            padding: '1.45rem 1.0875rem',
+            padding: '1rem 1.0875rem',
           }}
         >
-          <h1 style={{ margin: 0 }}>
+          <h1 style={{
+            margin: 0,
+            fontSize: '20px',
+            lineHeight: 1,
+            }}>
             <Link
               to="/"
               style={{
                 color: '#585858',
                 textDecoration: 'none',
-                fontSize: '20px',
               }}
             >
               KAPP Developments

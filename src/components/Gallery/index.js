@@ -20,17 +20,19 @@ class Gallery extends React.Component {
       keyboard: true
     }
     return (
-      <Swiper {...params}>
-         {this.props.album.map((item, index) => (
-           <div key={index}>
-             <img
-               alt={item}
-               src={item}
-               className="swiper-lazy"
-             />
-           </div>
-         ))}
-      </Swiper>
+      <div className={this.props.prefade}>
+        <Swiper {...params}>
+           {this.props.album.map((item, index) => (
+             <div key={index}>
+               <img
+                 alt={item}
+                 src={item}
+                 className="swiper-lazy"
+               />
+             </div>
+           ))}
+        </Swiper>
+      </div>
     )
   }
 }
