@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Swiper from 'react-id-swiper';
-import "./swiper.min.css";
+import './swiper.min.css';
+import './gallery.css';
 
 
 class Gallery extends React.Component {
@@ -20,7 +21,8 @@ class Gallery extends React.Component {
       keyboard: true
     }
     return (
-      <div className={this.props.prefade}>
+      <div className={this.props.restFade}>
+        <h4>Check out our work:</h4>
         <Swiper {...params}>
            {this.props.album.map((item, index) => (
              <div key={index}>

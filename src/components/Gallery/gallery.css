@@ -1,0 +1,66 @@
+@import '../../layouts/variables.css';
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: none;
+}
+.swiper-button-next {
+  &:before {
+    content: '';
+    width: 4px;
+    height: 69%;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 0;
+    bottom: calc(50% - 1px);
+    transform-origin: 50% 100%;
+  }
+  &:after {
+    content: '';
+    width: 4px;
+    height: 69%;
+    background-color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    top: calc(50% - 1px);
+    transform-origin: 50% 0;
+  }
+  /*@media(--large) {
+    width: calc(var(--gridL) * 8);
+    height: calc(var(--gridL) * 4);
+    margin: calc(var(--gridL) / 2);
+    border: 10px solid green;
+  }*/
+}
+.swiper-button-prev {
+  &:before {
+    content: '';
+    width: 4px;
+    height: 69%;
+    background-color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0;
+    bottom: calc(50% - 1px);
+    transform-origin: 50% 100%;
+  }
+  &:after {
+    content: '';
+    width: 4px;
+    height: 69%;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+    transform-origin: 50% 0;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: #1a6263;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: 0;
+}

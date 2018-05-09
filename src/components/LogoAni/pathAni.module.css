@@ -26,7 +26,7 @@
 }
 .houseSvg rect {
   transition: opacity 0.3s;
-  fill: #000;
+  fill: #777;
   opacity: 0;
 }
 .houseSvg rect:nth-of-type(3) {

@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import LogoAni from '../components/LogoAni'
 import Intro from '../components/Intro'
 import Gallery from '../components/Gallery'
+import Contact from '../components/Contact'
 import styles from '../components/Intro/intro.module.css'
 
 const deckAlbum = [
@@ -20,27 +21,16 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sx: 1,
-      entered: false,
       prefade: styles.prefade,
+      restFade: styles.prefade,
     };
   }
 
+
   componentDidMount() {
-    console.log(this.state.entered);
-    if (!this.state.entered) {
-      setTimeout(() => {
-          this.prefade();
-      }, 7000);
-      setTimeout(() => {
-        this.setState({
-          entered: true,
-        });
-      }, 100)
-
-      console.log('2:', this.state.entered);
-    }
-
+    setTimeout(() => {
+      this.prefade();
+    }, 6000);
   }
 
   prefade() {
@@ -51,6 +41,13 @@ class IndexPage extends React.Component {
         prefade: styles.prefade__active,
       })
     ));
+    let restDelay = (prefaders.length + 1) * 200;
+    setTimeout(() => {
+      this.setState({
+        restFade: styles.prefade__active,
+      })
+    }, restDelay)
+
   }
 
   render() {
@@ -59,7 +56,8 @@ class IndexPage extends React.Component {
         <LogoAni />
         <Intro prefade={this.state.prefade}/>
         {/* <Link to="/page-2/">Go to page 2</Link> */}
-        <Gallery album={deckAlbum} />
+        <Gallery restFade={this.state.restFade} album={deckAlbum} />
+        <Contact restFade={this.state.restFade} />
       </div>
     )}
 }
