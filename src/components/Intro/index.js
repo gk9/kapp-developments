@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './intro.module.css'
 
 class Intro extends React.Component {
-  render() {
+  render () {
     return (
       <div className={styles.container}>
         <h2 data-fade className={this.props.prefade}>Welcome to KAPP Developments.</h2>
