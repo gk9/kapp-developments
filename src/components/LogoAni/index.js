@@ -23,7 +23,7 @@ class LogoAni extends React.Component {
   }
 
   componentDidMount() {
-    // window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
     setTimeout(() => {
       this.setState({
         transition0: 'stroke-dashoffset 2s, transform 1s 4s',
@@ -42,13 +42,15 @@ class LogoAni extends React.Component {
     let mainBody = document.querySelector('body');
     let mainTop = mainBody.getBoundingClientRect().top;
     if (mainTop < -20) {
-      this.setState({
-        aniWidth: '100%',
-      });
+      console.log('this');
+      // this.setState({
+      //   aniWidth: '100%',
+      // });
     } else {
-      this.setState({
-        aniWidth: '50%',
-      });
+      console.log('that');
+      // this.setState({
+      //   aniWidth: '50%',
+      // });
     }
 
 
